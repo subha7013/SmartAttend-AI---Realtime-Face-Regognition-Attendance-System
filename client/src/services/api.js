@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://smartattend-ai-realtime-face-regognition-mdya.onrender.com/api';
 
 export const apiRequest = async (endpoint, options = {}) => {
   const token = localStorage.getItem('token');
@@ -118,8 +118,8 @@ export const getExportUrl = (type, date = '', department = '', search = '') => {
   if (department) params.append('department', department);
   if (search) params.append('search', search);
   const token = localStorage.getItem('token');
-  if (token) params.append('token', token); // Optional if needed for direct links
-  return `http://localhost:5000/api/attendance/export/${type}?${params.toString()}`;
+  const BASE_URL = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/api$/, '') : 'https://smartattend-ai-realtime-face-regognition-mdya.onrender.com';
+  return `${BASE_URL}/api/attendance/export/${type}?${params.toString()}`;
 };
 
 export const getTeachersList = () => {
