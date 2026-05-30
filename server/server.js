@@ -9,7 +9,13 @@ connectDB();
 const app = express();
 
 // Standard middlewares
-app.use(cors({ origin: '*' })); // Allow all origins for development
+app.use(cors({
+  origin: true,
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+app.options('*', cors()); // Enable pre-flight for all routes
 app.use(express.json({ limit: '10mb' })); // Support larger payloads for image transfers
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
