@@ -108,9 +108,9 @@ const Login = ({ setToken }) => {
         {/* Demo credentials hint */}
         <div className="mt-8 pt-6 border-t border-slate-800/60 text-center">
           <p className="text-xs text-slate-500">
-            This is the credentials . You can use it to checkout the process.
-            Email : <b>admin@smartattend.com</b>
-            Password : <b>admin123</b>
+            This is the credentials . You can use it to checkout the process.<br/>
+            Email : <b>admin@smartattend.com</b><br/>
+            Password : <b>admin123</b><br/>
           </p>
         </div>
       </div>
