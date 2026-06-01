@@ -118,7 +118,7 @@ export const getExportUrl = (type, date = '', department = '', search = '') => {
   if (department) params.append('department', department);
   if (search) params.append('search', search);
   const token = localStorage.getItem('token');
-  const BASE_URL = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/api$/, '') : 'https://smartattend-ai-realtime-face-regognition-mdya.onrender.com';
+  const BASE_URL = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/api$/, '') : 'http://localhost:5000/api';
   return `${BASE_URL}/api/attendance/export/${type}?${params.toString()}`;
 };
 
