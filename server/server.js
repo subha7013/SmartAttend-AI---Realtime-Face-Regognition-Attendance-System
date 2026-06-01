@@ -10,7 +10,7 @@ const app = express();
 
 // Standard middlewares
 app.use(cors({
-  origin: true,
+  origin: 'https://smartattendi.netlify.app',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
