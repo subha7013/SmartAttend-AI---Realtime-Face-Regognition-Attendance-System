@@ -10,8 +10,7 @@ const app = express();
 
 // CORS Configuration
 const allowedOrigins = [
-  'https://smartattendi.netlify.app',
-  'http://localhost:5173'
+  'https://smartattendi.netlify.app'
 ];
 
 app.use(
