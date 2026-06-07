@@ -5,7 +5,7 @@ A premium, state-of-the-art Real-Time Face Recognition Attendance Management Sys
 ---
 
 ## 🚀 Key Features
-
+*   **Role Based Authorization for Login as admin or teacher**
 *   **Real-Time Face Recognition:** Capture webcam frames directly in the browser and recognize registered students' faces with high precision.
 *   **Analytics Dashboard:** View live attendance statistics, department-wise breakdowns, daily metrics, and last-7-day attendance trends.
 *   **Dynamic Branded Reports:** Export attendance logs directly to beautifully styled Excel and PDF formats, with branding custom-tailored to the organization (e.g., Speedmart vs. SmartAttend).
